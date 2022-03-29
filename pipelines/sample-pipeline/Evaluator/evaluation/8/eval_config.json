@@ -1,0 +1,50 @@
+{
+  "evalConfig": {
+    "modelSpecs": [
+      {
+        "signatureName": "serving_default",
+        "labelKey": "Purchased",
+        "preprocessingFunctionNames": [
+          "tft_layer"
+        ]
+      }
+    ],
+    "slicingSpecs": [
+      {},
+      {
+        "featureKeys": [
+          "Gender"
+        ]
+      }
+    ],
+    "metricsSpecs": [
+      {
+        "modelNames": [
+          ""
+        ],
+        "perSliceThresholds": {
+          "binary_accuracy": {
+            "thresholds": [
+              {
+                "slicingSpecs": [
+                  {}
+                ],
+                "threshold": {
+                  "valueThreshold": {
+                    "lowerBound": 0.7
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "version": "0.35.0",
+  "dataLocation": "<user provided PCollection>",
+  "fileFormat": "<unknown>",
+  "modelLocations": {
+    "": "pipelines/sample-pipeline/Trainer/model/7/Format-Serving"
+  }
+}
